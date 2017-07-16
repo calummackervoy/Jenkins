@@ -1,0 +1,10 @@
+package test;
+import junit.framework.*;
+//import junit.framework.TestCase;
+import jenkins.Main;
+
+public class MainTest extends TestCase {
+  public void testConfigPresent() {
+    assertTrue(Main.readConfig());
+  }
+}
