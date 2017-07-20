@@ -15,7 +15,8 @@ pipeline {
         }
 	stage('test') {
 	   steps {
-	      pwd
+	      sh 'echo "current directory is:"'
+	      sh 'pwd'
               sh './Java/Jenkins/src/test/runtests.sh'
 	   }
 	}
@@ -27,6 +28,8 @@ pipeline {
 	/*common to split deploy into staging & production*/
 	stage('deploy') {
 	   steps {
+		sh 'echo "current directory is:"'
+		sh 'pwd'
 		sh './deploy.sh'
 	   }
 	}
