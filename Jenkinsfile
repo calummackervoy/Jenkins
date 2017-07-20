@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
+    /*environment {
 	
-    }
+    }*/
 
     stages {
         stage('build') {
@@ -15,9 +15,8 @@ pipeline {
         }
 	stage('test') {
 	   steps {
-		/*retry(3) {
+		
                     sh './Java/Jenkins/src/test/runtests'
-                }*/
 	   }
 	}
 	stage('sanity check') {
