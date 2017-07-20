@@ -8,15 +8,14 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                /*sh 'mvn --version'*/
 		sh 'echo "Hello World"'
 		sh 'printenv'
             }
         }
 	stage('test') {
 	   steps {
-		
-                    sh './Java/Jenkins/src/test/runtests'
+              sh './Java/Jenkins/src/test/runtests'
 	   }
 	}
 	stage('sanity check') {
