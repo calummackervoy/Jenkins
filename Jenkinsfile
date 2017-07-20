@@ -36,8 +36,8 @@ pipeline {
     }
     post {
         always {
-	    archive 'build/libs/**/*.jar'
-            junit 'build/reports/**/*.xml'
+	    /*archive 'build/libs/**/*.jar'
+            junit 'build/reports/**/*.xml'*/
 	    /*deleteDir() clean up our workspace */
         }
         success {
