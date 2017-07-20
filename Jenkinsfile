@@ -36,6 +36,7 @@ pipeline {
     }
     post {
         always {
+	    echo 'quick & dirty fix 3'
 	    /*deleteDir() clean up our workspace */
         }
         success {
