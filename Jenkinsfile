@@ -10,12 +10,13 @@ pipeline {
             steps {
                 /*sh 'mvn --version'*/
 		sh 'echo "Hello World"'
-		sh 'printenv'
+		/*sh 'printenv'*/
             }
         }
 	stage('test') {
 	   steps {
-              sh './Java/Jenkins/src/test/runtests'
+	      pwd
+              sh './Java/Jenkins/src/test/runtests.sh'
 	   }
 	}
 	stage('sanity check') {
@@ -26,7 +27,7 @@ pipeline {
 	/*common to split deploy into staging & production*/
 	stage('deploy') {
 	   steps {
-		sh './deploy'
+		sh './deploy.sh'
 	   }
 	}
     }
